@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	color: #000;
+}
+
+.page_header {
+	/* весь header */
+	width: 100%;
+	height: 900px;
+	background: linear-gradient(
+		180deg,
+		#eda418 47.4%,
+		rgba(237, 164, 24, 0) 100%
+	);
+}
+
+.navigation > a > img {
+	/* логотип, импортирован в svg */
+	position: absolute;
+	height: 73px;
+	width: 355px;
+	left: 130px;
+	top: 105px;
+}
+
+.navigation {
+	/* чтобы весь nav встал в строку (лого, главная, акции, о нас и корзина) */
+	display: flex;
+}
+
+.navigation > ul > li {
+	/* для "главной, акции, о нас" */
+	height: 38px;
+	width: 152px;
+}
+
+.navigation > ul {
+	/* сделано для того, чтобы выровнять и расположить в строку "главная, акции, о нас" */
+	position: absolute;
+	top: 117px;
+	display: flex;
+	align-items: center;
+}
+
+.navigation > ul > .general {
+	/* все для "главная", есть в макете */
+	position: relative;
+	font-weight: 700;
+	width: 151.5px;
+	height: 37.47px;
+	left: 632px;
+	gap: 0px;
+	opacity: 0px;
+}
+
+.navigation > ul > .actions {
+	/* аналогично, как и с главной */
+	position: absolute;
+	left: 850px;
+}
+
+.navigation > ul > .about {
+	/* аналогично, как и с главной */
+	position: absolute;
+	left: 1032px;
+}
+
+.actions,
+.about {
+	font-weight: 500; /* обычное объединение, чтобы в каждом не писать - "акции, о нас" */
+}
+
+.general,
+.actions,
+.about {
+	line-height: 31px;
+	font-size: 25px; /* то же, что и в прошлом случае - "главная, акции, о нас" */
+}
+
+.navigation > button {
+	/* задано для корзины, все в макете */
+	left: 1232px;
+	height: 70px;
+	width: 70px;
+	position: relative;
+	top: 101px;
+	border-radius: 50%;
+	border: none;
+}
+
+.container_page_header > ul > li > .text_header {
+	/* это уже ниже, фраза "Быстрая доставка для Вас" */
+	position: relative;
+	top: 367px;
+	left: 130px;
+	height: 63px;
+	width: 572px;
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 39px;
+}
+
+.container_page_header > ul > li > .text_header_discount {
+	/* следущая фраза */
+	position: relative;
+	width: 497px;
+	height: 35px;
+	top: 459px;
+	left: 130px;
+	gap: 0px;
+	opacity: 0px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19.5px;
+	text-align: left;
+}
+
+.container_page_header > ul > li > .container_button_header {
+	/* кнопка "заказать" */
+	position: relative;
+	width: 180.86px;
+	height: 60px;
+	top: 523px;
+	left: 130px;
+	border-radius: 50px;
+	border: none;
+	background-color: #e62525;
+	color: white;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 29.26px;
+	text-align: left;
+	text-decoration-skip-ink: none;
+	text-align: center;
+}
+
+.container_page_header > div > img {
+	/* картинка бургера */
+	position: absolute;
+	top: 194px;
+	left: 740px;
+	gap: 0px;
+	opacity: 0px;
+}
+
+/* Часть main */
+
+.page_main {
+	width: 100%;
+	height: 900px;
+}
+
+.container_catalog {
+	height: 900px;
+	text-align: center;
+}
+
+.catalog_title {
+	/* Меню */
+	height: 55px;
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 55px;
+}
+
+.container_catalog > .catalog_list {
+	/* Грид сетка для товаров каталога */
+	display: grid;
+	position: relative;
+	top: 93px;
+	grid-template-columns: repeat(3, 450px);
+	grid-template-rows: repeat(2, 350px);
+	column-gap: 38px;
+	row-gap: 103px;
+	justify-content: center;
+}
+
+.catalog_item {
+	/* Текс под картинками товаров */
+	font-size: 35px;
+	font-weight: 500;
+	height: 43px;
+}
+
+/* часть футер */
+
+.page_footer {
+	position: relative;
+	height: 450px;
+	text-align: center;
+	background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #eda61d 100%);
+}
+
+.footer_list {
+	/* 3 фразы про политику конфеденциальности, лояльность и договор оферетты */
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	top: 157px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.vintage_food {
+	/* ООО "Vintage Food" */
+	position: relative;
+	top: 226px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.security {
+	/* Все права защищены */
+	position: relative;
+	top: 275px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.social {
+	/* Остальные 3 пункта идут на настройку и выравнивание лого ВК и Телеграм */
+	position: relative;
+	top: 315px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social_item > img {
+	display: flex;
+	height: 60px;
+	width: 60px;
+}
+
+.item_eblan > img {
+	height: 50px;
+	width: 50px;
+}
